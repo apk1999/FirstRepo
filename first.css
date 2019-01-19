@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+.header{
+    text-align: center;
+    color:white;
+    background-image: linear-gradient(-90deg, red,orange,yellow,green,blue,indigo,violet); 
+    border: 2px solid beige;
+    height:100px;
+    line-height: 100px;
+}
+.nav{
+    background-color: #888888;
+    height: 50px;
+    line-height: 50px;
+}
+.demo{
+    display: flex;
+}
+.nav ul li{
+    list-style-type: none;
+    flex-grow: 1;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    display: block;
+}
+.nav ul li a:hover{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.row1,.row2{
+    display:flex;
+}
+.row1 div,.row2 div{
+    background-color: antiquewhite;
+    height: 75px;
+    transition-property: height;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    margin: 5px;
+    flex-grow: 1;
+    color:black;
+}
+.row1 div:hover,.row2 div:hover{
+    animation-name: myanimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 3px;
+    height: 200px;
+}
+
+@keyframes myanimation{
+    from{transform: rotateZ(0deg); background-color: coral; transition-property: }
+    25%{transform: rotateZ(-5deg); background-color: cornflowerblue;}
+    50%{transform: rotateZ(-10deg);background-color: darkcyan;}
+    75%{transform: rotateZ(0deg);background-color: burlywood;}
+    to{transform: rotateZ(5deg); background-color: crimson;}
+}
